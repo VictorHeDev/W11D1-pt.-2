@@ -29,10 +29,11 @@ export default class Tile extends React.Component {
   determineTileContents() {
     // if adj bomb count === 0
     // && isn't ^^^ display nothing
-    if (this.isBombed()) {
-      return "💣"
-    } else if (this.isFlagged()) {
+    if (this.isFlagged()) {
       return "🚩"
+    } else if (this.isBombed()) {
+      // return "💣"
+      return " "
     } else if (this.isExplored() && this.numSurroundingBombs() > 0) {
       return this.numSurroundingBombs();
     } else {
@@ -42,11 +43,15 @@ export default class Tile extends React.Component {
 
   handleClick(event){
     const altKey = event.altKey;
-    const tile = document.getElementById(this.props.tile);
+    const tile = this.props.tile;
     if(altKey){
       this.props.updateGame(tile, true);
     }else{
       this.props.updateGame(tile, false);
+    }
+
+    if(!altKey && tile.isBombed()) {
+
     }
   }
 

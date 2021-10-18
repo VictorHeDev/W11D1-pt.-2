@@ -175,3 +175,12 @@ h1 {
   border: 3px outset black;
   border: 3px inset blue;
 }
+
+.modal-screen {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+}
