@@ -3,8 +3,9 @@ import Game from "../components/Game";
 
 export const Root = () => {
   return (
-    <div>
-      <h1>gRoot rendered</h1>
+    <div className="game">
+      {/* <h1>gRoot rendered</h1> */}
+      <h1>MINESWEEPAH</h1>
       < Game />
     </div>
   )

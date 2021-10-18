@@ -195,17 +195,59 @@ var Tile = /*#__PURE__*/function (_React$Component) {
   var _super = _createSuper(Tile);
 
   function Tile(props) {
+    var _this;
+
     _classCallCheck(this, Tile);
 
-    return _super.call(this, props);
+    _this = _super.call(this, props);
+    _this.isBombed = _this.isBombed.bind(_assertThisInitialized(_this));
+    _this.isFlagged = _this.isFlagged.bind(_assertThisInitialized(_this));
+    _this.isExplored = _this.isExplored.bind(_assertThisInitialized(_this));
+    _this.determineTileContents = _this.determineTileContents.bind(_assertThisInitialized(_this));
+    return _this;
   }
 
   _createClass(Tile, [{
+    key: "isBombed",
+    value: function isBombed() {
+      return this.props.tile.bombed;
+    }
+  }, {
+    key: "isFlagged",
+    value: function isFlagged() {
+      return this.props.tile.flagged;
+    }
+  }, {
+    key: "isExplored",
+    value: function isExplored() {
+      return this.props.tile.explored;
+    }
+  }, {
+    key: "numSurroundingBombs",
+    value: function numSurroundingBombs() {
+      return this.props.tile.adjacentBombCount();
+    }
+  }, {
+    key: "determineTileContents",
+    value: function determineTileContents() {
+      // if adj bomb count === 0
+      // && isn't ^^^ display nothing
+      if (this.isBombed()) {
+        return "💣";
+      } else if (this.isFlagged()) {
+        return "🚩";
+      } else if (this.isExplored() && this.numSurroundingBombs() > 0) {
+        return this.numSurroundingBombs();
+      } else {
+        return " ";
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "tile"
-      }, "T");
+      }, this.determineTileContents());
     }
   }]);
 
@@ -399,7 +441,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var Root = function Root() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "gRoot rendered"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Game__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "game"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "MINESWEEPAH"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Game__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
 /***/ }),
