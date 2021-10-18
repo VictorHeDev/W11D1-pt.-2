@@ -177,10 +177,42 @@ h1 {
 }
 
 .modal-screen {
+  display: none;
+  justify-content: center;
+  align-items: center;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.modal{
+  display:flex;
+  height:150px;
+  width:300px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  background-color:hotpink;
+}
+
+.won{
+  z-index: 6;
+  display:none;
+}
+
+.lost{
+  z-index: 6;
+  display:none;
+}
+
+.display {
+  display:flex;
+}
+
+.explored{
+  background-color: mediumslateblue;
 }

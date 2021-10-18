@@ -29,14 +29,18 @@ export default class Tile extends React.Component {
   determineTileContents() {
     // if adj bomb count === 0
     // && isn't ^^^ display nothing
+    const tile = document.getElementById(this.props.tile.pos);
     if (this.isFlagged()) {
       return "🚩"
     } else if (this.isBombed()) {
       // return "💣"
       return " "
     } else if (this.isExplored() && this.numSurroundingBombs() > 0) {
+      tile.classList.add("explored");
       return this.numSurroundingBombs();
-    } else {
+    } else if (this.isExplored()){
+      tile.classList.add("explored");
+    }else {
       return " "
     }
   }
@@ -50,7 +54,7 @@ export default class Tile extends React.Component {
       this.props.updateGame(tile, false);
     }
 
-    if(!altKey && tile.isBombed()) {
+    if(!altKey && this.isBombed()) {
 
     }
   }

@@ -1,13 +1,566 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./components/Board.jsx":
+/*!******************************!*\
+  !*** ./components/Board.jsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Board)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Tile__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Tile */ "./components/Tile.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var Board = /*#__PURE__*/function (_React$Component) {
+  _inherits(Board, _React$Component);
+
+  var _super = _createSuper(Board);
+
+  function Board(props) {
+    _classCallCheck(this, Board);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Board, [{
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      var grid = this.props.board.grid;
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "board"
+      }, grid.map(function (row, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+          className: "row",
+          key: "r".concat(i)
+        }, row.map(function (tile, j) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
+            tile: tile,
+            key: j,
+            updateGame: _this.props.updateGame
+          });
+        }));
+      }));
+    }
+  }]);
+
+  return Board;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
+
+/***/ }),
 
 /***/ "./components/Game.jsx":
 /*!*****************************!*\
   !*** ./components/Game.jsx ***!
   \*****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/victorhe/Desktop/W11D1p2/minesweeper/components/Game.jsx: Unexpected token, expected \"...\" (29:24)\n\n\u001b[0m \u001b[90m 27 |\u001b[39m       \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[33m<\u001b[39m \u001b[33mBoard\u001b[39m board\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mstate\u001b[33m.\u001b[39mboard} updateGame\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mupdateGame} \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m         \u001b[33m<\u001b[39m \u001b[33mWinLoseModal\u001b[39m {} \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m       \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 31 |\u001b[39m     )\u001b[0m\n\u001b[0m \u001b[90m 32 |\u001b[39m   }\u001b[0m\n    at Object._raise (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:541:17)\n    at Object.raiseWithData (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:534:17)\n    at Object.raise (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:495:17)\n    at Object.unexpected (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:3550:16)\n    at Object.expect (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:3524:28)\n    at Object.jsxParseAttribute (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:7318:12)\n    at Object.jsxParseOpeningElementAfterName (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:7345:28)\n    at Object.jsxParseOpeningElementAt (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:7338:17)\n    at Object.jsxParseElementAt (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:7370:33)\n    at Object.jsxParseElementAt (/Users/victorhe/Desktop/W11D1p2/minesweeper/node_modules/@babel/parser/lib/index.js:7386:32)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _minesweeper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./minesweeper */ "./components/minesweeper.js");
+/* harmony import */ var _Board__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Board */ "./components/Board.jsx");
+/* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Modal */ "./components/Modal.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+var Game = /*#__PURE__*/function (_React$Component) {
+  _inherits(Game, _React$Component);
+
+  var _super = _createSuper(Game);
+
+  function Game(props) {
+    var _this;
+
+    _classCallCheck(this, Game);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      board: new _minesweeper__WEBPACK_IMPORTED_MODULE_1__.Board(9, 4)
+    };
+    _this.updateGame = _this.updateGame.bind(_assertThisInitialized(_this)); // console.log(this.state.board.lost())
+
+    return _this;
+  }
+
+  _createClass(Game, [{
+    key: "updateGame",
+    value: function updateGame(tile, flagged) {
+      // console.log(tile.pos) --> finish later!
+      if (flagged) {
+        tile.toggleFlag();
+      } else {
+        tile.explore();
+      }
+
+      this.setState({
+        board: this.state.board
+      });
+      var modal = document.querySelector('.modal-screen');
+
+      if (this.state.board.won()) {
+        var won = document.querySelector(".won");
+        won.classList.add("display");
+        modal.classList.add("display");
+      } else if (this.state.board.lost()) {
+        var lost = document.querySelector(".lost");
+        lost.classList.add("display");
+        modal.classList.add("display");
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Board__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        board: this.state.board,
+        updateGame: this.updateGame
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Modal__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        won: this.state.board.won
+      }));
+    }
+  }]);
+
+  return Game;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Game);
+
+/***/ }),
+
+/***/ "./components/Modal.jsx":
+/*!******************************!*\
+  !*** ./components/Modal.jsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var WinLoseModal = /*#__PURE__*/function (_React$Component) {
+  _inherits(WinLoseModal, _React$Component);
+
+  var _super = _createSuper(WinLoseModal);
+
+  function WinLoseModal(props) {
+    _classCallCheck(this, WinLoseModal);
+
+    return _super.call(this, props); // this.state = {
+    //   contents: ''
+    // }
+    // this.setContents = this.setContents.bind(this);
+  } // setContents(){
+  //   if(this.props.won){
+  //     this.setState({
+  //       contents: 'YOU WON ;)'
+  //     })
+  //   }else{
+  //     this.setState({
+  //     contents: "YOU'RE A GIANT LOSER ;("
+  //     })
+  //   }
+  // }
+  // componentDidMount(){
+  //   this.setContents();
+  // }
+
+
+  _createClass(WinLoseModal, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "modal-screen"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "modal"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "won"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "YOU WON ;)")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "lost"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, "YOU'RE A GIANT LOSER ;("))));
+    }
+  }]);
+
+  return WinLoseModal;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WinLoseModal);
+
+/***/ }),
+
+/***/ "./components/Tile.jsx":
+/*!*****************************!*\
+  !*** ./components/Tile.jsx ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Tile)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var Tile = /*#__PURE__*/function (_React$Component) {
+  _inherits(Tile, _React$Component);
+
+  var _super = _createSuper(Tile);
+
+  function Tile(props) {
+    var _this;
+
+    _classCallCheck(this, Tile);
+
+    _this = _super.call(this, props);
+    _this.isBombed = _this.isBombed.bind(_assertThisInitialized(_this));
+    _this.isFlagged = _this.isFlagged.bind(_assertThisInitialized(_this));
+    _this.isExplored = _this.isExplored.bind(_assertThisInitialized(_this));
+    _this.determineTileContents = _this.determineTileContents.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(Tile, [{
+    key: "isBombed",
+    value: function isBombed() {
+      return this.props.tile.bombed;
+    }
+  }, {
+    key: "isFlagged",
+    value: function isFlagged() {
+      return this.props.tile.flagged;
+    }
+  }, {
+    key: "isExplored",
+    value: function isExplored() {
+      return this.props.tile.explored;
+    }
+  }, {
+    key: "numSurroundingBombs",
+    value: function numSurroundingBombs() {
+      return this.props.tile.adjacentBombCount();
+    }
+  }, {
+    key: "determineTileContents",
+    value: function determineTileContents() {
+      // if adj bomb count === 0
+      // && isn't ^^^ display nothing
+      var tile = document.getElementById(this.props.tile.pos);
+
+      if (this.isFlagged()) {
+        return "🚩";
+      } else if (this.isBombed()) {
+        // return "💣"
+        return " ";
+      } else if (this.isExplored() && this.numSurroundingBombs() > 0) {
+        tile.classList.add("explored");
+        return this.numSurroundingBombs();
+      } else if (this.isExplored()) {
+        tile.classList.add("explored");
+      } else {
+        return " ";
+      }
+    }
+  }, {
+    key: "handleClick",
+    value: function handleClick(event) {
+      var altKey = event.altKey;
+      var tile = this.props.tile;
+
+      if (altKey) {
+        this.props.updateGame(tile, true);
+      } else {
+        this.props.updateGame(tile, false);
+      }
+
+      if (!altKey && this.isBombed()) {}
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "tile",
+        onClick: this.handleClick,
+        id: this.props.tile.pos
+      }, this.determineTileContents());
+    }
+  }]);
+
+  return Tile;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
+
+/***/ }),
+
+/***/ "./components/minesweeper.js":
+/*!***********************************!*\
+  !*** ./components/minesweeper.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Tile": () => (/* binding */ Tile),
+/* harmony export */   "Board": () => (/* binding */ Board)
+/* harmony export */ });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Tile = /*#__PURE__*/function () {
+  function Tile(board, pos) {
+    _classCallCheck(this, Tile);
+
+    this.board = board;
+    this.pos = pos;
+    this.bombed = false;
+    this.explored = false;
+    this.flagged = false;
+  }
+
+  _createClass(Tile, [{
+    key: "adjacentBombCount",
+    value: function adjacentBombCount() {
+      var bombCount = 0;
+      this.neighbors().forEach(function (neighbor) {
+        if (neighbor.bombed) {
+          bombCount++;
+        }
+      });
+      return bombCount;
+    }
+  }, {
+    key: "explore",
+    value: function explore() {
+      if (this.flagged || this.explored) {
+        return this;
+      }
+
+      this.explored = true;
+
+      if (!this.bombed && this.adjacentBombCount() === 0) {
+        this.neighbors().forEach(function (tile) {
+          tile.explore();
+        });
+      }
+    }
+  }, {
+    key: "neighbors",
+    value: function neighbors() {
+      var _this = this;
+
+      var adjacentCoords = [];
+      Tile.DELTAS.forEach(function (delta) {
+        var newPos = [delta[0] + _this.pos[0], delta[1] + _this.pos[1]];
+
+        if (_this.board.onBoard(newPos)) {
+          adjacentCoords.push(newPos);
+        }
+      });
+      return adjacentCoords.map(function (coord) {
+        return _this.board.grid[coord[0]][coord[1]];
+      });
+    }
+  }, {
+    key: "plantBomb",
+    value: function plantBomb() {
+      this.bombed = true;
+    }
+  }, {
+    key: "toggleFlag",
+    value: function toggleFlag() {
+      if (!this.explored) {
+        this.flagged = !this.flagged;
+        return true;
+      }
+
+      return false;
+    }
+  }]);
+
+  return Tile;
+}();
+Tile.DELTAS = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]];
+var Board = /*#__PURE__*/function () {
+  function Board(gridSize, numBombs) {
+    _classCallCheck(this, Board);
+
+    this.gridSize = gridSize;
+    this.grid = [];
+    this.numBombs = numBombs;
+    this.generateBoard();
+    this.plantBombs();
+  }
+
+  _createClass(Board, [{
+    key: "generateBoard",
+    value: function generateBoard() {
+      for (var i = 0; i < this.gridSize; i++) {
+        this.grid.push([]);
+
+        for (var j = 0; j < this.gridSize; j++) {
+          var tile = new Tile(this, [i, j]);
+          this.grid[i].push(tile);
+        }
+      }
+    }
+  }, {
+    key: "onBoard",
+    value: function onBoard(pos) {
+      return pos[0] >= 0 && pos[0] < this.gridSize && pos[1] >= 0 && pos[1] < this.gridSize;
+    }
+  }, {
+    key: "plantBombs",
+    value: function plantBombs() {
+      var totalPlantedBombs = 0;
+
+      while (totalPlantedBombs < this.numBombs) {
+        var row = Math.floor(Math.random() * (this.gridSize - 1));
+        var col = Math.floor(Math.random() * (this.gridSize - 1));
+        var tile = this.grid[row][col];
+
+        if (!tile.bombed) {
+          tile.plantBomb();
+          totalPlantedBombs++;
+        }
+      }
+    }
+  }, {
+    key: "lost",
+    value: function lost() {
+      var lost = false;
+      this.grid.forEach(function (row) {
+        row.forEach(function (tile) {
+          if (tile.bombed && tile.explored) {
+            lost = true;
+          }
+        });
+      });
+      return lost;
+    }
+  }, {
+    key: "won",
+    value: function won() {
+      var won = true;
+      this.grid.forEach(function (row) {
+        row.forEach(function (tile) {
+          if (tile.flagged === tile.revealed || tile.flagged !== tile.bombed) {
+            won = false;
+          }
+        });
+      });
+      return won;
+    }
+  }]);
+
+  return Board;
+}();
 
 /***/ }),
 
@@ -17,7 +570,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Root": () => (/* binding */ Root)
@@ -40,7 +592,6 @@ var Root = function Root() {
   \*********************************************/
 /***/ ((module) => {
 
-"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -141,7 +692,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react-dom.development.js
  *
@@ -26409,7 +26959,6 @@ exports.version = ReactVersion;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 function checkDCE() {
@@ -26453,7 +27002,6 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react.development.js
  *
@@ -28797,7 +29345,6 @@ exports.version = ReactVersion;
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -28813,7 +29360,6 @@ if (false) {} else {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /** @license React v0.20.2
  * scheduler-tracing.development.js
  *
@@ -29171,7 +29717,6 @@ exports.unstable_wrap = unstable_wrap;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /** @license React v0.20.2
  * scheduler.development.js
  *
@@ -29828,7 +30373,6 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -29844,7 +30388,6 @@ if (false) {} else {
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -29911,9 +30454,8 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!****************************************!*\
   !*** ./frontend/react_minesweeper.jsx ***!
   \****************************************/
