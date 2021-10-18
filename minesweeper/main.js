@@ -53,6 +53,8 @@ var Board = /*#__PURE__*/function (_React$Component) {
   _createClass(Board, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       var grid = this.props.board.grid;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "board"
@@ -63,7 +65,8 @@ var Board = /*#__PURE__*/function (_React$Component) {
         }, row.map(function (tile, j) {
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Tile__WEBPACK_IMPORTED_MODULE_1__["default"], {
             tile: tile,
-            key: j
+            key: j,
+            updateGame: _this.props.updateGame
           });
         }));
       }));
@@ -204,6 +207,7 @@ var Tile = /*#__PURE__*/function (_React$Component) {
     _this.isFlagged = _this.isFlagged.bind(_assertThisInitialized(_this));
     _this.isExplored = _this.isExplored.bind(_assertThisInitialized(_this));
     _this.determineTileContents = _this.determineTileContents.bind(_assertThisInitialized(_this));
+    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -243,10 +247,24 @@ var Tile = /*#__PURE__*/function (_React$Component) {
       }
     }
   }, {
+    key: "handleClick",
+    value: function handleClick(event) {
+      var altKey = event.altKey;
+      var tile = document.getElementById(this.props.tile);
+
+      if (altKey) {
+        this.props.updateGame(tile, true);
+      } else {
+        this.props.updateGame(tile, false);
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-        className: "tile"
+        className: "tile",
+        onClick: this.handleClick,
+        id: this.props.tile.pos
       }, this.determineTileContents());
     }
   }]);

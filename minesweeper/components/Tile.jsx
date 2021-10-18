@@ -7,6 +7,7 @@ export default class Tile extends React.Component {
     this.isFlagged = this.isFlagged.bind(this);
     this.isExplored = this.isExplored.bind(this);
     this.determineTileContents = this.determineTileContents.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   isBombed() {
@@ -39,9 +40,19 @@ export default class Tile extends React.Component {
     }
   }
 
+  handleClick(event){
+    const altKey = event.altKey;
+    const tile = document.getElementById(this.props.tile);
+    if(altKey){
+      this.props.updateGame(tile, true);
+    }else{
+      this.props.updateGame(tile, false);
+    }
+  }
+
   render(){
     return (
-      <div className="tile">
+      <div className="tile" onClick={this.handleClick} id={this.props.tile.pos}>
         {this.determineTileContents()}
       </div>
     )
